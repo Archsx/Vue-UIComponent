@@ -1,8 +1,8 @@
 <template>
   <div id="foo">
-    <swiper _height='100px'>
+    <swiper _height='100px' >
       <swiper-item v-for="(item, index) in items" :key="index">
-        <div :style="{background:'url(' + item.pic + ')',width:'300px',height:'200px',backgroundSize:'cover',transition:'all .3s'}">  </div>
+        <div :style="{background:'url(' + item.pic + ')',backgroundSize:'cover',transition:'all .3s'}" class="content">  </div>
       </swiper-item>
     </swiper>  
   </div>
@@ -16,9 +16,11 @@ export default {
   data(){
     return {
       items:[{
-        pic:'https://i.loli.net/2018/07/10/5b43a47b497d6.jpeg'
+        pic:'https://i.loli.net/2018/07/10/5b44c5fd9b999.jpeg'
       },{
         pic:'https://i.loli.net/2018/07/10/5b43a47b5a6a9.jpeg'
+      },{
+        pic:'https://i.loli.net/2018/07/10/5b44c819a8aa5.jpeg'
       }]
     }
   }
@@ -26,5 +28,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.content{
+  width: 100%;
+  height: 100%;
+}
+
+
+
 </style>

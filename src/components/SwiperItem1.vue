@@ -22,6 +22,7 @@ export default {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%
+    height: 100%;
+    border: 1px solid red
   }
 </style>
