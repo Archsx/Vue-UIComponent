@@ -91,7 +91,7 @@ export default {
       this.removeTransition();
     },
     moving(e) {
-      // e.stopPropagation()
+      e.stopPropagation()
       e.preventDefault();
 
       let distanceX = e.changedTouches[0].pageX - this.start.x;
@@ -108,9 +108,6 @@ export default {
     endMoving(e) {
       let distanceX = e.changedTouches[0].pageX - this.start.x;
       if (Math.abs(distanceX) > this.width * this.proportion) {
-        // if(){
-
-        // }
         if (distanceX < 0) {
           this.setTransition();
           this.next();
@@ -119,6 +116,7 @@ export default {
           this.pre();
         }
       } else {
+        this.setTransition()
         this.setTransform();
       }
     },

@@ -1,8 +1,8 @@
 <template>
   <div id="foo">
-    <swiper _height='100px' >
+    <swiper _height='100px' class="pad">
       <swiper-item v-for="(item, index) in items" :key="index">
-        <div :style="{background:'url(' + item.pic + ')',backgroundSize:'cover',transition:'all .3s'}" class="content">  </div>
+        <div :style="{background:'url(' + item.pic + ')',backgroundSize:'cover'}" class="content">  </div>
       </swiper-item>
     </swiper>  
   </div>
@@ -32,6 +32,9 @@ export default {
 .content{
   width: 100%;
   height: 100%;
+}
+.pad{
+  margin: 20px;
 }
 
 
